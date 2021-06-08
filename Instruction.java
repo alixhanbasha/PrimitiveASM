@@ -3,8 +3,8 @@
  *     functions to determine the type of the object ?
  *
  *  TODO
- *     Add more usefull instructions like jmp, cpy, ...
- *     Allow the arguments of the instruction to be MemoryLocation, if so then take the value from the location and finish the operation
+ *     - Allow the arguments of the instruction to be MemoryLocation, if so then take the value from the location and finish the operation
+ *     - Definetly have to create a "Calculator" class that handles numbers and strings, in order to not repeat the code for simmilar instructions
  * */
 abstract class Instruction {
 
@@ -93,8 +93,8 @@ abstract class Instruction {
                 Memory.insertInto( this._LOCATION_, (double)(n1+n2) );
             }
             else if( this.operant1 instanceof String || this.operant2 instanceof String ){
-            // below comment is cancer... ignore it ( allthough it can be usefull )
-            // (this.operant1 instanceof String && (this.operant2 instanceof Integer || this.operant2 instanceof Double)) || (this.operant2 instanceof String && (this.operant1 instanceof Integer || this.operant1 instanceof Double))
+                // below comment is cancer... ignore it ( allthough it can be usefull )
+                // (this.operant1 instanceof String && (this.operant2 instanceof Integer || this.operant2 instanceof Double)) || (this.operant2 instanceof String && (this.operant1 instanceof Integer || this.operant1 instanceof Double))
                 String res1 = operant1.toString();
                 String res2 = operant2.toString();
                 Memory.insertInto( this._LOCATION_, res1+res2 );
@@ -104,5 +104,6 @@ abstract class Instruction {
         }
     }
     // class Subtract extends Instruction {}
-
+    // class Jump extends Instruction {}
+    // class Copy extends Instruction {}
 }
