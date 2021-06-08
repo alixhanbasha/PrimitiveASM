@@ -40,7 +40,7 @@ public class Main {
             new Instruction.Add( Memory.MemoryLocation.RA4, 10, 10 ),
             new Instruction.Read( Memory.MemoryLocation.RA4 ),
 
-            new Instruction.Add( Memory.MemoryLocation.RA5, 10, 10.5 ), // currently only works with (int+int) or (double+double) or ( string + int||double or int||double + string )
+            new Instruction.Add( Memory.MemoryLocation.RA5, 10, 10.5 ),
             new Instruction.Read( Memory.MemoryLocation.RA5 ),
 
             new Instruction.Add( Memory.MemoryLocation.RA6, 5.2, 10.99 ),
